@@ -1,0 +1,24 @@
+\name{UnivariateLinReg}
+\alias{UnivariateLinReg}
+\title{Univariate analysis of simulated data}
+\usage{
+  UnivariateLinReg(data, outcome = "Y", confounders = NULL)
+}
+\arguments{
+  \item{data}{data.frame Consisting of covariates to
+  analyse, and the outcome}
+
+  \item{outcome}{Label of the outcome in `data'. By default
+  is assumed to be "Y".}
+
+  \item{confounders}{Vector of labels of any confounders to
+  adjust for in the analyses.}
+}
+\value{
+  A N by P+1 data.frame of the outcome Y, and genotypes
+}
+\description{
+  Performs univariate analysis of simulated data, with or
+  without confounders
+}
+

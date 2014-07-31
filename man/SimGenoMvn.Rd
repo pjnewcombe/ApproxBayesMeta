@@ -1,0 +1,33 @@
+\name{SimGenoMvn}
+\alias{SimGenoMvn}
+\title{Simulates a matrix of genotypes using a latent multivariate normal}
+\usage{
+  SimGenoMvn(seed = 1, N, B = 1, P, MAF, rSq,
+    normalise = F)
+}
+\arguments{
+  \item{seed}{Random number seed}
+
+  \item{N}{number of people}
+
+  \item{B}{number of snp-blocks}
+
+  \item{P}{number of SNPs}
+
+  \item{MAF}{Minor Allele Frequency of the SNPs}
+
+  \item{rSq}{pair-wise correlation between the latent
+  normal variables}
+}
+\value{
+  A N by P matrix of 0/1/2 genotype codes
+}
+\description{
+  Simulates a matrix of genotypes utilising a latent
+  multivariate normal distribution. All `SNPs' have the
+  same specified MAF, and the same (also specified)
+  pairwise correlations. Therehsolds consistent with HWE
+  for the specified MAF are applied on the resulting
+  continuous covariates, to create categorical `genotypes'.
+}
+

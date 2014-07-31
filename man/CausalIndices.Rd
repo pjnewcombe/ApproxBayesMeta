@@ -1,0 +1,24 @@
+\name{CausalIndices}
+\alias{CausalIndices}
+\title{Generates indices of SNPs simulated as causal within each block.}
+\usage{
+  CausalIndices(B = 1, P, betas)
+}
+\arguments{
+  \item{B}{Number of blocks (of equal size) which the
+  covariate matrix is split into}
+
+  \item{P}{Number of SNPs per block}
+
+  \item{betas}{Vector of effects used to simulate causal
+  effects within each block.}
+}
+\value{
+  A vector of indices of the location of SNPs simulated as
+  causal
+}
+\description{
+  Generates indices of SNPs simulated as causal within each
+  block.
+}
+
