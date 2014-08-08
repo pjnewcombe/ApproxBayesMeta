@@ -22,16 +22,15 @@ GenerateTs <- function(
   
   ts <- apply(uni.res, MAR=2, function(x) {
     # Group counts under HWE
-    n0 <- round(n*(1-x["MAF"])^2)
-    n1 <- round(n*(1-x["MAF"])*x["MAF"])*2
-    n2 <- n-n1-n0
+    n1 <- n*(1-x["MAF"])*x["MAF"]*2
+    n2 <- n*x["MAF"]*x["MAF"]
     
     # Group means from beta-hat (mean-centred)
-    y0 <- - (n1*x["Estimate"] + n2*2*x["Estimate"])/n
+    y0 <- -(n1 * x["Estimate"] + n2 * 2 * x["Estimate"])/n
     y1 <- y0 + x["Estimate"]
     y2 <- y0 + 2*x["Estimate"]
     
-    return(y1*n1 + 2*y2*n2)
+    return( y1 * n1 + 2 * y2 * n2 )
   } )
   
   return(ts)
