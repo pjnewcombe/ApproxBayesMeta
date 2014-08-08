@@ -23,7 +23,7 @@ GenerateTs <- function(
   ts <- apply(uni.res, MAR=2, function(x) {
     # Group counts under HWE
     n0 <- round(n*(1-x["MAF"])^2)
-    n1 <- round(n*(1-x["MAF"])*x["MAF"])
+    n1 <- round(n*(1-x["MAF"])*x["MAF"])*2
     n2 <- n-n1-n0
     
     # Group means from beta-hat (mean-centred)
