@@ -1,6 +1,7 @@
 export(BlockIndices)
 export(CausalIndices)
 export(CheckUniqueCovariates)
+export(GenerateTrueTs)
 export(GenerateTs)
 export(GenerateXtxPlugin)
 export(Namer)

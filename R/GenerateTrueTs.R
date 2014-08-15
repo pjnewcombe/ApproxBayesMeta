@@ -3,13 +3,13 @@
 #' produced are for use in an intercept-free model.
 #' 
 #' @export
-#' @title Generate t true vector (from IPD) for marginal meta-analysis model.
-#' @name GenerateTs
+#' @title Generate true t vector (from IPD) for marginal meta-analysis model.
+#' @name GenerateTrueTs
 #' @param y Normalised vector of outcome values.
 #' @param X Covariate matrix
 #' 
 #' @return A vector of t's
-GenerateTs <- function(
+GenerateTrueTs <- function(
   y,
   X) {
   
@@ -25,7 +25,6 @@ GenerateTs <- function(
     # Group means from beta-hat (mean-centred)
     y1 <- mean(y[x==1])
     y2 <- mean(y[x==2])
-    
     return( y1 * n1 + 2 * y2 * n2 )
   } )
   
