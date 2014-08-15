@@ -2,8 +2,8 @@ Package: ApproxBayesMeta
 Type: Package
 Title: Please fill a text title description into the txt file TextTitle in the
     root of the package directory.
-Version: 0.1-08-08-2014
-Date: 08-08-2014
+Version: 0.1-15-08-2014
+Date: 15-08-2014
 Author: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
 Maintainer: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
 Description: Please fill a text description into the txt file TextDescription
@@ -13,6 +13,7 @@ Collate:
     'BlockIndices.R'
     'CausalIndices.R'
     'CheckUniqueCovariates.R'
+    'GenerateTrueTs.R'
     'GenerateTs.R'
     'GenerateXtxPlugin.R'
     'Namer.R'
