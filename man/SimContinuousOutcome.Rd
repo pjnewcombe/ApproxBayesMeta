@@ -2,7 +2,7 @@
 \alias{SimContinuousOutcome}
 \title{Simulates continuous outcomes}
 \usage{
-  SimContinuousOutcome(seed = 1, X, B = 1, betas, sd,
+  SimContinuousOutcome(seed = 1, X, betas, sd,
     normalise = F)
 }
 \arguments{
@@ -11,13 +11,8 @@
   \item{X}{A covariate matrix (rows individuals, columns
   covariates)}
 
-  \item{B}{Number of blocks (of equal size) which the
-  covariate matrix is split into}
-
-  \item{betas}{Vector of effects to simulate for causal
-  SNP(s) within each block. Within each block the causal
-  location(s) will be arbitrarily counted from the first
-  SNP onward.}
+  \item{betas}{A named vector of effects, named with the
+  covariates the effects correspond to in X.}
 
   \item{sd}{Remaining residual error in outcome}
 

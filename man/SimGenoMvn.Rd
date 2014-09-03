@@ -12,12 +12,14 @@
 
   \item{B}{number of snp-blocks}
 
-  \item{P}{number of SNPs}
+  \item{P}{number of SNPs in each block}
 
-  \item{MAF}{Minor Allele Frequency of the SNPs}
+  \item{MAF}{Minor Allele Frequency of the SNPs in each
+  block (vector of same length as the number of blocks)}
 
   \item{rSq}{pair-wise correlation between the latent
-  normal variables}
+  normal variables (vector of same length as the number of
+  blocks)}
 }
 \value{
   A N by P matrix of 0/1/2 genotype codes

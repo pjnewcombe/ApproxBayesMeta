@@ -6,10 +6,8 @@
 #' @name SimContinuousOutcome
 #' @param seed Random number seed
 #' @param X A covariate matrix (rows individuals, columns covariates)
-#' @param B Number of blocks (of equal size) which the covariate matrix is split into
-#' @param betas Vector of effects to simulate for causal SNP(s) within each block.
-#' Within each block the causal location(s) will be arbitrarily counted from the first
-#' SNP onward.
+#' @param betas A named vector of effects, named with the covariates the
+#' effects correspond to in X.
 #' @param sd Remaining residual error in outcome
 #' @param normalise Center the outcome around it's mean for use with an
 #' intercept-free model
@@ -18,18 +16,14 @@
 SimContinuousOutcome <- function(
   seed=1,
   X,
-  B=1,
   betas,
   sd,
   normalise=F) {
   
-  # Figure out block setup
-  causal.indices <- CausalIndices(B=B,P=(ncol(X)/B),betas=betas)
-  
   # Simulate outcomes
   cat("Simulating outcome vector\n")
   set.seed(seed)
-  Y <- rnorm(nrow(X), mean= X[,causal.indices] %*% as.matrix(rep(betas,B),ncol=1), sd=sd)
+  Y <- rnorm(nrow(X), mean = X[,names(betas)] %*% betas, sd=sd)
   
   # Normalise covariates and outcome, for intercept-free model
   if (normalise) {
