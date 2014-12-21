@@ -1,4 +1,4 @@
-#' Generates block indices. NOTE: assumes all blocks are of EQUAL size.
+#' Generates block indices. NOTE: assumes all blocks are of EQUAL size. Test
 #' 
 #' @export
 #' @title Generates indices of blocks.
