@@ -23,7 +23,7 @@ SimContinuousOutcome <- function(
   # Simulate outcomes
   cat("Simulating outcome vector\n")
   set.seed(seed)
-  Y <- rnorm(nrow(X), mean = X[,names(betas)] %*% betas, sd=sd)
+  Y <- rnorm(nrow(X), mean = X[,names(betas), drop=F] %*% betas, sd=sd)
   
   # Normalise covariates and outcome, for intercept-free model
   if (normalise) {

@@ -13,6 +13,8 @@
 #' @param mafs Vector of Minor Allele Frequencies. If left as NULL, these are
 #' estimated from W
 #' @param B The number of covariate blocks
+#' @param block.indices Optional vector of block indices (if not provided, 
+#' identical block sizes are used generated from the function BlockIndices)
 #' 
 #' @return A list of block plug-in estimates for X'X
 #' @author Paul Newcombe
@@ -20,6 +22,7 @@ GenerateXtxPlugin <- function(
   n,
   W,
   B=1,
+  block.indices=NULL,
   mafs=NULL) {
   
   # Generate mafs from W if not provided
@@ -31,7 +34,9 @@ GenerateXtxPlugin <- function(
   W <- NormaliseCovariates(W)
   
   xTx <- list()
-  block.indices <- BlockIndices(B=B,V=ncol(W))
+  if (is.null(block.indices)) {
+    block.indices <- BlockIndices(B=B,V=ncol(W))    
+  }
   for (b in 1:B) {
     covs.b <- c(block.indices[b]:(block.indices[b+1]-1) )
     cov.names.b <- colnames(W)[covs.b]

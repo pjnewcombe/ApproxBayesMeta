@@ -1,23 +1,9 @@
 Package: ApproxBayesMeta
 Type: Package
-Title: Please fill a text title description into the txt file TextTitle in the
-    root of the package directory.
-Version: 0.1-03-09-2014
-Date: 03-09-2014
+Title: Please fill a text title description into the txt file TextTitle in the root of the package directory.
+Version: 0.1-11-03-2015
+Date: 11-03-2015
 Author: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
 Maintainer: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
-Description: Please fill a text description into the txt file TextDescription
-    in the root of the package directory.
+Description: Please fill a text description into the txt file TextDescription in the root of the package directory.
 License: GPL (>=2)
-Collate:
-    'BlockIndices.R'
-    'CausalIndices.R'
-    'CheckUniqueCovariates.R'
-    'GenerateTrueTs.R'
-    'GenerateTs.R'
-    'GenerateXtxPlugin.R'
-    'Namer.R'
-    'NormaliseCovariates.R'
-    'SimContinuousOutcome.R'
-    'SimGenoMvn.R'
-    'UnivariateLinReg.R'
