@@ -1,20 +1,9 @@
 Package: ApproxBayesMeta
 Type: Package
-<<<<<<< HEAD
 Title: Please fill a text title description into the txt file TextTitle in the root of the package directory.
-Version: 0.1-11-03-2015
-Date: 11-03-2015
+Version: 0.1-12-03-2015
+Date: 12-03-2015
 Author: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
 Maintainer: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
 Description: Please fill a text description into the txt file TextDescription in the root of the package directory.
-=======
-Title: Please fill a text title description into the txt file TextTitle in the root of the
-          package directory.
-Version: 0.1-15-01-2015
-Date: 15-01-2015
-Author: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
-Maintainer: Paul J Newcombe <paul.newcombe@mrc-bsu.cam.ac.uk>
-Description: Please fill a text description into the txt file TextDescription in the root of
-          the package directory.
->>>>>>> d3651f0587f67300c9a2e5e564ca1506aa69bce0
 License: GPL (>=2)
