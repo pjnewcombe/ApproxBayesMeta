@@ -2,7 +2,7 @@ package.name <- 'ApproxBayesMeta'
 package.location <- '/Users/pauln/Dropbox/Work Projects/R Packages'
 github.username <-'pjnewcombe'
 commit.message <- NULL
-commit.message <- "Edited simulation functions for 100 block design."
+#commit.message <- "Edited simulation functions for 100 block design."
 
 ### --- Load Pmisc and refresh the package
 library(Pmisc)
